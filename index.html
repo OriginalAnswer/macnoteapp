@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>노트앱: 맥 스타일의 유저 친화적 웹 노트</title>
 </head>
-<body>
-    
+<body class="preload">
+    <!--  -->
+    <input type="checkbox" id="top_cbx_calender" class="dpnone">
+    <input type="checkbox" id="top__cbx_user" class="dpnone">
+
+    <label class="top_back_calender" for="top_calender_cb"></label>
+    <label class="top_back_user" for="top_user_cb"></label>
+    <!--  -->
+    <header class="top">
+        <div class="top_l">
+            <label for="top_calender_cb">
+                <div class="top_realtime"></div>
+            </label>
+        </div>
+        <div class="top_c">
+            <div class="btn-new-bx" onclick="newBox()">
+                <span>+</span>
+            </div>
+        </div>
+        <div class="top_r">
+            <label for="ww-door">widget</label> 
+            <label for="rw-door">set</label>
+            <label 
+                for="top_user_cb" 
+                class="top_user-btn-box">
+                <i class="fa-solid fa-user"></i>
+            </label>
+        </div>
+    </header>
+    <script>
+        const body = () => {document.body.removeClass('preload')}
+    </script>
+    <script src="https://kit.fontawesome.com/e4704dcbbd.js" crossorigin="anonymous"></script>
 </body>
 </html>
