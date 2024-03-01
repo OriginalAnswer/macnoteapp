@@ -3,41 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>노트앱: 맥 스타일의 유저 친화적 웹 노트</title>
 </head>
 <body class="preload">
     <!--  -->
     <input type="checkbox" id="top_cbx_calender" class="dpnone">
-    <input type="checkbox" id="top__cbx_user" class="dpnone">
+    <input type="checkbox" id="top_cbx_user" class="dpnone">
 
-    <label class="top_back_calender" for="top_calender_cb"></label>
-    <label class="top_back_user" for="top_user_cb"></label>
+    <label class="top_back_user back" for="top_user_cb"></label>
+    <label class="top_back_calender back" for="top_cbx_calender"></label>
+    <div class="top_calender">
+        <header>
+            <p class="current-date"></p>
+            <nav class="icons">
+                <span id="prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </span>
+                <span id="next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </span>
+            </nav>
+        </header>
+        <div class="calendar">
+            <ul class="weeks">
+                <li>S</li>
+                <li>M</li>
+                <li>T</li>
+                <li>W</li>
+                <li>T</li>
+                <li>F</li>
+                <li>S</li>
+            </ul>
+            <ul class="days"></ul>
+        </div>
+    </div>
     <!--  -->
     <header class="top">
-        <div class="top_l">
-            <label for="top_calender_cb">
-                <div class="top_realtime"></div>
+        <section class="top_l">
+            <label for="top_cbx_calender" class="top_btn top_btn_calender">
+                <span class="top_realtime">
+                </span>
             </label>
-        </div>
-        <div class="top_c">
-            <div class="btn-new-bx" onclick="newBox()">
+        </section>
+        <section class="top_c">
+            <div class="top_btn" onclick="newBox()">
                 <span>+</span>
             </div>
-        </div>
-        <div class="top_r">
-            <label for="ww-door">widget</label> 
-            <label for="rw-door">set</label>
+        </section>
+        <section class="top_r">
+            <label for="ww-door" class="top_btn">widget</label> 
+            <label for="rw-door" class="top_btn">set</label>
             <label 
-                for="top_user_cb" 
-                class="top_user-btn-box">
+                for="top_cbx_user" 
+                class="top_user-btn-box top_btn">
                 <i class="fa-solid fa-user"></i>
             </label>
-        </div>
+        </section>
     </header>
     <script>
         const body = () => {document.body.removeClass('preload')}
     </script>
     <script src="https://kit.fontawesome.com/e4704dcbbd.js" crossorigin="anonymous"></script>
+    <script src="./javascripts/top/realtime.js"></script>
+    <script src="./javascripts/top/calender.js"></script>
 </body>
 </html>
